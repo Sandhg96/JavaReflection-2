@@ -35,7 +35,6 @@ public class Main {
 	public static Shape createShape(Class<? extends Shape> clazz, Dimension dimension) {
 		try {
 			Shape shape = null;
-			
 			Constructor<?> constructor = clazz.getDeclaredConstructor(Dimension.class);
 			constructor.setAccessible(true);
 			shape = (Shape)constructor.newInstance(dimension);
